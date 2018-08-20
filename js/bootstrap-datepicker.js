@@ -409,7 +409,7 @@
 
 		show: function(){
 			if (!this.isInline)
-				this.picker.appendTo('body');
+				this.picker.appendTo(this.o.container || 'body');
 			this.picker.show();
 			this.place();
 			this._attachSecondaryEvents();
