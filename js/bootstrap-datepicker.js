@@ -597,6 +597,10 @@
 				top += height;
 			else
 				top -= calendarHeight + parseInt(this.picker.css('padding-top'));
+			
+			if (this.o.ignoreVerticalScroll) {
+				top -= scrollTop;
+			}
 
 			this.picker.css({
 				top: top,
